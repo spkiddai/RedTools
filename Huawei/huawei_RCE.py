@@ -31,7 +31,10 @@ def create_session(config, url):
     session.verify = False
     config['headers'].update({'Referer': url})
     session.headers.update(config['headers'])
-    session.proxies.update(config['proxies'])
+
+    #burp代理
+    #session.proxies.update(config['proxies'])
+
     return session
 
 def login_hw(session, url, config):
